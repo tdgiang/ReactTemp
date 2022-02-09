@@ -19,7 +19,6 @@ import {
   Button,
   Tooltip,
 } from "@material-ui/core";
-import { detailCustomer } from "../../apis/Functions/customer";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 import colors from "../../assets/Color";
@@ -90,25 +89,6 @@ function StickyHeadTable(props) {
   };
   const handleChangeRowsPerPage = (event) => {
     setPageSize(event.target.value);
-  };
-
-  const handleDetailAccount = async (row) => {
-    props.showLoading();
-    const res = await detailCustomer(row.sscid, {
-      platform: "Web",
-    });
-    props.hideLoading();
-    if (res.data.code == 200 && res.data.data) {
-      setDetailAccount(res.data.data);
-      setOpen(true);
-    } else if (res.data.code == 401) {
-      localStorage.removeItem(KEY.API_TOKEN);
-      setTimeout(() => {
-        history.push("/");
-      }, 100);
-    } else {
-      enqueueSnackbar(res.data.message, { variant: "error" });
-    }
   };
 
   const handleClose = () => {

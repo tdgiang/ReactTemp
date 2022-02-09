@@ -22,9 +22,6 @@ import { convertDate, convertTimeApi, trimObject } from "../../config/Function";
 import { useSnackbar } from "notistack";
 import { showLoading, hideLoading } from "../../actions/loadingAction";
 import { connect } from "react-redux";
-import { updateCustomers, detailCustomer } from "../../apis/Functions/customer";
-import DateFnsUtils from "@date-io/date-fns";
-import CloudUploadIcon from "@material-ui/icons/CloudUpload";
 import PickerImage from "../../Component/Input/PickerImage";
 import {
   MuiPickersUtilsProvider,
@@ -157,7 +154,6 @@ function CreateDeparment(props) {
     });
     props.hideLoading();
   };
-  
 
   const onPicker = (value) => {
     if (value.target.checked) {
