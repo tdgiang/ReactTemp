@@ -1,0 +1,85 @@
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.activeMenu {
+  background-color: #d5e3d6 !important;
+  color: rgb(60, 141, 188) !important;
+}
+
+.activeHeadMenu {
+  color: rgb(60, 141, 188) !important;
+}
+
+.MuiTypography-displayBlock {
+  font-size: 13px !important;
+}
+
+.MuiDivider-root {
+  height: 0 !important;
+}
+
+.MuiOutlinedInput-input {
+  padding: 12px !important;
+  /* max-width: 150px !important; */
+}
+
+.MuiTableCell-root {
+  padding: 8px !important;
+}
+
+.MuiTableCell-alignLeft {
+  border-right: 0.05px solid #e0e0e0;
+}
+
+.MuiTableCell-alignCenter {
+  border-right: 0.05px solid #e0e0e0;
+}
+
+.MuiTableCell-stickyHeader {
+  border-right: 0.05px solid #e0e0e0 !important;
+}
+
+.MuiSvgIcon-root {
+  width: 20px !important;
+}
+
+.MuiListItemText-root {
+  margin-left: -22px !important;
+}
+
+.makeStyles-drawerClose-8 {
+  width: 51px !important;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.wrapper-class {
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.editor-class {
+  min-height: 400px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+.toolbar-class {
+  border: 1px solid #ccc;
+}
