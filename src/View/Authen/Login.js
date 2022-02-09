@@ -25,6 +25,7 @@ import { useSnackbar } from "notistack";
 import { showLoading, hideLoading } from "../../actions/loadingAction";
 import { connect } from "react-redux";
 import { saveUserToRedux } from "../../actions/users";
+import localStorageService from "../../services/localStorageService";
 
 function Copyright() {
   return (
@@ -79,7 +80,7 @@ const LoginScreen = (props) => {
   const [helperText, sethelperText] = useState("");
   const handleUser = async () => {
     let res;
-    localStorage.setItem(KEY.API_TOKEN, "res.data.data.token");
+    localStorageService.setItem(KEY.API_TOKEN, "res.data.data.token");
     history.push("/home");
 
     // if (state.email === "" || state.password === "") {
